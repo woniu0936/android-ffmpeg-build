@@ -1,0 +1,14 @@
+prefix=/Users/songhuan/develop/media/ffmpeg/android/arm64-v8a
+exec_prefix=${prefix}
+libdir=/Users/songhuan/develop/media/ffmpeg/android/arm64-v8a/lib
+includedir=/Users/songhuan/develop/media/ffmpeg/android/arm64-v8a/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 59.15.100
+Requires: 
+Requires.private: libswresample >= 4.0.100, libavutil >= 57.13.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm -lz
+Cflags: -I${includedir}
